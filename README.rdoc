@@ -10,7 +10,7 @@ Most of the logic of the email app is presented on the "aiss gem" which was also
 * 128bit AES ECB body ciphered
 * PKCS11 sign of the emails with the Portuguese Citizen card
 * Emails have states: read/unread/sent
-* Autocomplete 'to' field with previously received/sent emails
+* Autocomplete 'to' field with previously received/sent emails 
 * Will use IMAP to delete all your emails, caution is advised
 
 == Screen Shots:
@@ -19,5 +19,7 @@ Most of the logic of the email app is presented on the "aiss gem" which was also
 http://f.cl.ly/items/3R382D3X002H0l0q1F39/list_emails.png
 
 * Send Email
+http://cl.ly/image/1318462W1D2m/Screen%20Shot%202013-07-08%20at%208.13.12%20PM.png
 
-* Receive Emails
+* Http Authentication
+http://cl.ly/image/1e3q0V3E0j0O/Screen%20Shot%202013-07-08%20at%208.12.50%20PM.png
