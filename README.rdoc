@@ -13,8 +13,14 @@ Most of the logic of the email app is presented on the "aiss gem" which was also
 * Autocomplete 'to' field with previously received/sent emails 
 * Will use IMAP to delete all your emails, caution is advised
 
-== Screen Shots:
+== Prerequisites:
+* Java, since pkcs11 is implemented in java
+* Card reader
+* Portuguese Citizen Card with authentication codes
+* Rails 3.1, ruby 1.9 and AISS-gem 
 
+
+== Screen Shots:
 * List Emails
 http://f.cl.ly/items/3R382D3X002H0l0q1F39/list_emails.png
 
