@@ -1,0 +1,36 @@
+<%- model_class = Email -%>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:from) %></th>
+      <th><%= model_class.human_attribute_name(:to) %></th>
+      <th><%= model_class.human_attribute_name(:state) %></th>
+      <th><%= model_class.human_attribute_name(:subject) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @emails.each do |email| %>
+      <tr>
+        <td><%= link_to email.from, email_path(email) %></td>
+        <td><%= link_to email.to, email_path(email) %></td>
+        <td><% if(email.state == 'unread')  %>    
+               <span class="label label-warning"><%= link_to email.state, email_path(email) %></span>
+                 <%end%>
+              <% if(email.state == 'read')  %>    
+                <span class="label label-info"><%= link_to email.state, email_path(email) %></span>
+                  <%end%>
+              <%if(email.state == 'sent')  %>    
+                 <span class="label label-success"><%= link_to email.state, email_path(email) %></span>
+              <%end%>
+        
+        </td>
+        <td><%= link_to email.subject, email_path(email) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => "Criar Novo Email"),
+            new_email_path,
+            :class => 'btn btn-primary' %>

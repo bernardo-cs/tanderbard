@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tanderbarde</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="navbar">
+	
+  <div class="navbar-inner">
+    <a class="brand" href="<%= emails_url %>">Tanderbard</a>
+    <ul class="nav">
+      
+      <li <% if (params[:render] == 'inbox' || params[:render]==nil) then %> class="active" <%end%>  >
+             <a href="<%= emails_path(render: :inbox) %>">Inbox</a>
+      </li>
+      
+      
+      <li <% if params[:render] == 'unread' then %> class="active" <%end%> >
+        <a href="<%= emails_path(render: :unread) %>">Nao Lidos <span class="badge badge-warning"><%= @unread_email %></span></a>
+          
+      </li>
+     
+      
+      
+      <li <% if params[:render] == 'sent' then %> class="active" <%end%> >
+        <a href="<%= emails_path(render: :sent) %>">Enviados</a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:3000/emails/get_all">Refresh Mails</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
