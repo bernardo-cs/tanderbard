@@ -1,7 +1,7 @@
+http://www.ist.utl.pt/img/tecnico.png
+
 = Tandarbird
 == The portuguese safe webmail client
-
-http://www.ist.utl.pt/img/tecnico.png
 
 This is a simple webmail client with support for sending/receiving signed, ciphered and compressed email.
 Most of the logic of the email app is presented on the "aiss gem" which was also part of this project.
